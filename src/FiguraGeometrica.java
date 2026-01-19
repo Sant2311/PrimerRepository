@@ -5,6 +5,10 @@ abstract class FiguraGeometrica {
         this.numLados = numLados;
     }
 
+    public FiguraGeometrica(){
+        
+    }
+
     abstract double obtenerArea();
 
     abstract double obtenerPerimetro();

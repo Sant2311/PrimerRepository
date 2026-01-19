@@ -10,14 +10,26 @@ public class App {
             System.out.println("1. Cuadrado");
             System.out.println("2. Rectángulo");
             System.out.println("3. Triángulo");
-            System.out.println("4. Salir");
+            System.out.println("4. Circulo");
+            System.out.println("5. Salir");
             System.out.print("Elige una opción: ");
             opcion = leerEntero(teclado);
 
-            if (opcion == 4) {
+            if (opcion == 5) {
                 System.out.println("Adiós!");
                 break;
             }
+
+            if (opcion == 1) {
+                System.out.print("Ingresa el lado del cuadrado: ");
+                double lado = teclado.nextDouble();
+                Cuadrado cuadrado = new Cuadrado(lado);
+
+                System.out.println("Área del cuadrado: " + cuadrado.obtenerArea());
+                System.out.println("Perímetro del cuadrado: " + cuadrado.obtenerPerimetro());
+                break;
+            }
+
             if (opcion == 2) {
                 System.out.print("Ingresa la altura del rectángulo: ");
                 double altura = teclado.nextDouble();
@@ -36,7 +48,17 @@ public class App {
                 System.out.println("Área del triángulo: " + triangulo.obtenerArea());
                 System.out.println("Perímetro del triángulo: " + triangulo.obtenerPerimetro());
                 break;
-            } else {
+            } 
+            
+             if (opcion == 4) {
+                System.out.print("Ingresa el radio del círculo: ");
+                double radio = teclado.nextDouble();
+                Circulo circulo = new Circulo(radio);
+
+                System.out.println("Área del círculo: " + circulo.obtenerArea());
+                System.out.println("Perímetro del círculo: " + circulo.obtenerPerimetro());
+                break;
+            }else {
                 System.out.println("Opción no válida");
             }
         } while (true);
